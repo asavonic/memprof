@@ -1,4 +1,4 @@
-The MIT License (MIT)
+/* The MIT License (MIT)
 
 Copyright (c) 2016 Andrew Savonichev
 
@@ -18,4 +18,19 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+SOFTWARE. */
+
+#ifndef MEMPROF_H
+#define MEMPROF_H
+
+#include <stddef.h>
+
+extern const char* g_memprof_alloc_filename;
+extern const char* g_memprof_info_filename;
+
+void log_mem_alloc(const void* mem, size_t size);
+void log_mem_free(const void* mem);
+
+#endif /* MEMPROF_H */
+
+
